@@ -115,6 +115,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
   release:
+    permissions: write-all
     needs:
       - base
       - build

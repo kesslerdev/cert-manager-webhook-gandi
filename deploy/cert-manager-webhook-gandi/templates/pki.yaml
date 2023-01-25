@@ -27,7 +27,7 @@ metadata:
     heritage: {{ .Release.Service }}
 spec:
   secretName: {{ include "cert-manager-webhook-gandi.rootCACertificate" . }}
-  duration: 43800h # 5y
+  duration: 43800h0m0s # 5y
   issuerRef:
     name: {{ include "cert-manager-webhook-gandi.selfSignedIssuer" . }}
   commonName: "ca.cert-manager-webhook-gandi.cert-manager"
@@ -61,7 +61,7 @@ metadata:
     heritage: {{ .Release.Service }}
 spec:
   secretName: {{ include "cert-manager-webhook-gandi.servingCertificate" . }}
-  duration: 8760h # 1y
+  duration: 8760h0m0s # 1y
   issuerRef:
     name: {{ include "cert-manager-webhook-gandi.rootCAIssuer" . }}
   dnsNames:
